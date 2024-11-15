@@ -1,0 +1,119 @@
+/* src/components/ComicList.css */
+
+/* Fondo de pantalla */
+.comic-list-container {
+  background-image: url('../media/comics.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Contenedor translúcido detrás del carrusel */
+.carousel-wrapper {
+  background-color: rgba(0, 0, 0, 0.7); /* Negro con 70% de opacidad */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Estilos del carrusel */
+.comic-slide {
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.comic-slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.comic-slide img:hover {
+  transform: scale(1.05);
+}
+
+.comic-slide p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.comic-slide button {
+  background-color: #e62429;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  margin-top: 0.5em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.comic-slide button:hover {
+  background-color: #b91c22;
+}
+
+/* Center the "Ultimos comics" title */
+.title {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+/* Favorites Section Styling */
+.favorites-section {
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Translucent background */
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+/* Horizontal layout for favorites */
+.favorites-list {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.favorite-comic-image {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.favorites-list .comic-slide {
+  text-align: center;
+  padding: 10px;
+  min-width: 150px;
+}
+
+.favorites-list .comic-slide p {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.favorites-list .comic-slide button {
+  font-size: 0.9rem;
+  padding: 0.4em 0.8em;
+}
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.loading-image {
+  width: 250px;
+}

@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import 'slick-carousel/slick/slick.css';        
+import 'slick-carousel/slick/slick-theme.css';   
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import ComicList from './components/ComicList';
+import ComicDetail from './components/ComicDetail';
+import Favorites from './components/Favorites';
+import './App.css';  
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Marvel Comics</h1>
+      <Routes>
+        <Route path="/" element={<ComicList />} />
+        <Route path="/comic/:id" element={<ComicDetail />} />
+        <Route path="/favorites" element={<Favorites />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
